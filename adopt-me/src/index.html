@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adopt Me! v8</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="root">not rendered</div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+    <script>
+      // Your code is going to go here
+
+      // Always capitalize your components
+      // Function that returns the results of whatever React.createElement does.
+      const App = () => {
+        return React.createElement(
+          'div',
+
+          // Attributes:
+          // The null or empty object here this is going to be whatever attributes
+          // that you're handing down to this Example: { id: 'my-id' }
+          {},
+
+          // The children:
+          React.createElement('h1', {}, 'Adopt Me!')
+        )
+      }
+
+      const container = document.getElementById('root')
+      const root = ReactDOM.createRoot(container)
+      root.render(React.createElement(App))
+    </script>
+  </body>
+</html>
