@@ -2,12 +2,14 @@
 
 ## FrontEnd Masters
 
-#### Teacher:
+#### Teacher: Brian Holt
 
 #### Repos:
 
 - Course repo: https://github.com/btholt/complete-intro-to-react-v8
 - Course examples repo: https://github.com/btholt/citr-v8-project
+
+## Section 01: Setup & Tooling
 
 ## 1. Pure React & createElement
 
@@ -58,3 +60,9 @@ Vite has something that's called tree shaking (only includes code that you're ac
 `"build": "vite build",`: So what preview does is, it runs Vite build, and then it shows you what Vite built for you.
 
 `npm run dev`
+
+## Section 02: Core Rect Concepts
+
+## 6. JSX
+
+We are writing JavaScript meant to imitate HTML. It'd be cool if your tools could just make the hops for us, and we get to describe what we want that is the principle behind JSX.
