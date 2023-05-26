@@ -4,6 +4,10 @@
 
 #### Teacher: Brian Holt
 
+#### Course website:
+
+https://react-v8.holt.courses/
+
 #### Repos:
 
 - Course repo: https://github.com/btholt/complete-intro-to-react-v8
@@ -50,7 +54,7 @@ Here you can see what did it load, how did it load it, did i have any issues, it
 
 ## 5. Vite Setup
 
-`npm i -D vite@3.1.4 @vitejs/plugin-react@2.1.0`  
+`npm i -D vite@3.1.4 @vitejs/plugin-react@2.1.0`
 
 Vite insists that you call files JSX, or it will not do the JSX translation.
 `npm i react@18.2.0 react-dom@18.2.0`
@@ -66,3 +70,17 @@ Vite has something that's called tree shaking (only includes code that you're ac
 ## 6. JSX
 
 We are writing JavaScript meant to imitate HTML. It'd be cool if your tools could just make the hops for us, and we get to describe what we want that is the principle behind JSX.
+
+Self-closing tag it's optional in HTML, it is not optional in JSX, you must put that self-closing tag.
+
+```jsx
+// Valid JSX
+<div />
+<div></div>
+```
+
+## 7. Configuring ESLint & React
+
+We need to give ESLint a hand to get it to recognize React and not yell about React not being used. Right now it thinks we're importing React and not using because it doesn't know what to do with React. Let's help it.
+
+Run this: `npm install -D eslint-plugin-import@2.26.0 eslint-plugin-jsx-a11y@6.6.1 eslint-plugin-react@7.31.8`
