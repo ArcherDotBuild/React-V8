@@ -99,7 +99,7 @@ So the way that you have state inside of a function, is you use these **React Ho
 
 They have to be called every single time in the same order. You can't have conditional creation of hooks, they have to be created every single time in the same order. Cuz the way that React is keeping track this is, this component calls these pieces of state in this order.
 
-React Hook
+React Hook **useState**
 
 ```jsx
 const [location, setLocation] = useState('')
@@ -149,4 +149,32 @@ You can make your own custom hooks. all custom hooks are other hooks bundled tog
     ))}
   </select>
 </label>
+```
+
+## 11. Effects
+
+React Hook **useEffect**, And effect is basically something that's going to happen outside of your component, So i have my location, animal and breed. But then once I have those and user clicks Submit, I want that to go out to my API and get a new list of pets so that the user can see what they've searched for. That's what these effects are for. It's like go retrieve this from some other place or go do something outside of the life cycle of my component. So typically that's API requests.
+
+An **Effect** runs, every single time, you re-render the application, so this is going to request the pets every single time i type, which is not what i want, i only want that on submit events.
+
+```javascript
+  useEffect(() => {
+    requestPets();
+  });
+```
+#### So how do we do that?
+You can give it an array of dependencies. And here if i give it nothing, then it's only going to request once at the beginning and then it's never going to do it again, which is actually what i want. The only time after this that I want to call request pets is on submit, On the form submit, which so that puts the user in control of when this research is for things.
+
+```javascript
+  useEffect(() => {
+    requestPets();
+  }, []);
+```
+
+Every time that animal changes, I want you to rerun request pets. So now if i change animal, Now it's doing it every single time that i change this.
+
+```javascript
+  useEffect(() => {
+    requestPets();
+  }, [animal]);
 ```
