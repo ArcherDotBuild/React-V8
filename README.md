@@ -88,6 +88,7 @@ Run this: `npm install -D eslint-plugin-import@2.26.0 eslint-plugin-jsx-a11y@6.6
 ## 8. setState Hook
 
 #### How does React work? How does React know when to re render?
+
 Every time when an event happens in JavaScript it re-renders everything, top to bottom.
 
 These render functions are meant to be totally stateless. When i say stateless, it means that they're not modifying global.
@@ -95,4 +96,38 @@ These render functions are meant to be totally stateless. When i say stateless, 
 So the way that you have state inside of a function, is you use these **React Hooks**. So these hooks are then passed into React and then React gives them back to you.
 
 #### Couple of rules about hooks
-They have to be called every single time in the same order. You can't have conditional creation of hooks, they have to be created every single time in the same order. Cuz the way that React is keeping track this is, this component calls these pieces of state in this order. 
+
+They have to be called every single time in the same order. You can't have conditional creation of hooks, they have to be created every single time in the same order. Cuz the way that React is keeping track this is, this component calls these pieces of state in this order.
+
+React Hook
+
+```jsx
+const [location, setLocation] = useState('')
+
+// These three line are equivalent to the React Hook above
+const locationHook = useState('')
+const location = locationHook[0]
+const setLocation = locationHook[1]
+```
+
+You can make your own custom hooks. all custom hooks are other hooks bundled together as one hook. So eventually, all custom hooks that you see, it's just calling a bunch of other hooks and they're bundling that into one more usable hook to use.
+
+`npm install -D eslint-plugin-react-hooks@4.6.0` This is an official ESLint tool from the React team to make sure that you use hooks in a good way
+
+## 9. Mapping Through Data with Hooks
+
+```jsx
+<label htmlFor='animal'>
+  Animal
+  <select
+    id='animal'
+    value={animal}
+    onChange={(e) => setAnimal(e.target.value)}
+  >
+    <option />
+    {ANIMALS.map((animal) => (
+      <option key={animal}>{animal}</option>
+    ))}
+  </select>
+</label>
+```
