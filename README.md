@@ -131,3 +131,22 @@ You can make your own custom hooks. all custom hooks are other hooks bundled tog
   </select>
 </label>
 ```
+
+## 10. Adding Animal Breed
+
+```jsx
+<label htmlFor='breed'>
+  Breed
+  <select
+    id='breed'
+    disabled={breeds.length === 0}
+    value={breed}
+    onChange={(e) => setBreed(e.target.value)}
+  >
+    <option />
+    {breeds.map((breed) => (
+      <option key={breed}>{breed}</option>
+    ))}
+  </select>
+</label>
+```
