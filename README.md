@@ -178,3 +178,42 @@ Every time that animal changes, I want you to rerun request pets. So now if i ch
     requestPets();
   }, [animal]);
 ```
+
+## 12. useBreedList Custom Hook
+
+If you wanna do async await of an useEffect, you must create an async function inside of the useEffect.
+
+```javascript
+useEffect(() => {
+    if (!animal) {
+      setBreedList([]);
+    } else if (localCache[animal]) {
+      setBreedList(localCache[animal]);
+    } else {
+      requestBreedList();
+    }
+
+    async function requestBreedList() {
+      setBreedList([]);
+      setStatus("loading");
+
+      const res = await fetch(
+        `http://pets-v2.dev-apis.com/breeds?animal=${animal}`
+      );
+      const json = await res.json();
+      localCache[animal] = json.breeds || [];
+      setBreedList(localCache[animal]);
+      setStatus("loaded");
+    }
+  
+  }, [animal]);
+
+  return [breedList, status]
+}
+```
+
+The **status** in the useEffect, makes it really easy to test if you do it that way, you basically wait for that to become loaded and then you can write tests. And by tracking that status throughout the entire thing. So if you have a custom hook that is doing something that you have to wait on, I
+would recommend tracking a status because then later when you go to do tests, it makes it very easy
+to test.
+
+## 13. Handling user Input Review
