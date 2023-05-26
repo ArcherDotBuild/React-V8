@@ -216,4 +216,6 @@ The **status** in the useEffect, makes it really easy to test if you do it that 
 would recommend tracking a status because then later when you go to do tests, it makes it very easy
 to test.
 
-## 13. Handling user Input Review
+## 13. Component Composition
+
+https://legacy.reactjs.org/docs/events.html#supported-events
