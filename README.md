@@ -84,3 +84,15 @@ Self-closing tag it's optional in HTML, it is not optional in JSX, you must put 
 We need to give ESLint a hand to get it to recognize React and not yell about React not being used. Right now it thinks we're importing React and not using because it doesn't know what to do with React. Let's help it.
 
 Run this: `npm install -D eslint-plugin-import@2.26.0 eslint-plugin-jsx-a11y@6.6.1 eslint-plugin-react@7.31.8`
+
+## 8. setState Hook
+
+#### How does React work? How does React know when to re render?
+Every time when an event happens in JavaScript it re-renders everything, top to bottom.
+
+These render functions are meant to be totally stateless. When i say stateless, it means that they're not modifying global.
+
+So the way that you have state inside of a function, is you use these **React Hooks**. So these hooks are then passed into React and then React gives them back to you.
+
+#### Couple of rules about hooks
+They have to be called every single time in the same order. You can't have conditional creation of hooks, they have to be created every single time in the same order. Cuz the way that React is keeping track this is, this component calls these pieces of state in this order. 
