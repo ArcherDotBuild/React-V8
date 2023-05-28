@@ -236,7 +236,6 @@ https://legacy.reactjs.org/docs/events.html#supported-events
 
 ```javascript
 import { Link, BrowserRouter, Routes, Route } from 'react-router-dom'
-
 ;<BrowserRouter>
   <header>
     <Link to='/'>
@@ -265,3 +264,22 @@ const Details = () => {
 
 export default Details
 ```
+
+## 18. React Query
+
+The nice thing about React Query is it you're gonna start removing effects from your database cuz it's basically going to handle all your API requests for you.
+
+Secrets to a long happy life with React:
+
+- Minimize effects in your code
+- If there's a library that can handle it for you, do that
+- Where you have effects, try and contain them to small testable areas
+
+**95% of use cases for useEffect is API request**
+
+`npm i @tanstack/react-query@4.10.1`
+
+There is a thought process we could have multiple query clients throughout your app, that maybe different parts of your app need to make requests to the same place and you don't want them to share a cache.
+
+**React Query cache is stored in-memory**
+
