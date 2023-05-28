@@ -219,3 +219,5 @@ to test.
 ## 13. Component Composition
 
 https://legacy.reactjs.org/docs/events.html#supported-events
+
+## 14. Styling the Pet Component
