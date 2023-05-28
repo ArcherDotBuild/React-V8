@@ -291,3 +291,22 @@ Mutations
 Unlike queries, mutations are typically used to create/update/delete data or perform server side-effects. For this purpose, TanStack Query exports a **useMutation** hook.
 
 https://tanstack.com/query/v4/docs/react/guides/mutations
+
+## 21. Uncontrolled Forms
+
+We could let the browser take care of it. And then we could just pull it out of the browser whenever we had a submit event, which we can.
+
+#### FormData
+
+Is a Browser API, you can feed it a form and it'll pull out all of the data on the form for you into an object.
+
+```jsx
+const formData = new FormData(e.target)
+const obj = {
+  animal: formData.get('animal') ?? '',
+  breed: formData.get('breed') ?? '',
+  location: formData.get('location') ?? '',
+}
+```
+
+Now we're gonna have an obj which is gonna have the animal, the breed, and the location, which is gonna be the current state of the form.
