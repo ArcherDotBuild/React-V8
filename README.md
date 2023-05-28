@@ -283,3 +283,11 @@ There is a thought process we could have multiple query clients throughout your 
 
 **React Query cache is stored in-memory**
 
+## 19. Performance Optimization with React Query
+
+## 20. Refactoring fetchBreedList
+
+Mutations
+Unlike queries, mutations are typically used to create/update/delete data or perform server side-effects. For this purpose, TanStack Query exports a **useMutation** hook.
+
+https://tanstack.com/query/v4/docs/react/guides/mutations
