@@ -226,10 +226,42 @@ https://legacy.reactjs.org/docs/events.html#supported-events
 
 ## 15. React Dev Tools
 
-**Props** are read only, they come in as properties, if i modify the props, it doesn't modify what the parent is passing in. State is mutable, usestate and hooks and things like that. 
+**Props** are read only, they come in as properties, if i modify the props, it doesn't modify what the parent is passing in. State is mutable, usestate and hooks and things like that.
 
 ## Section 03: React Capabilities
 
 ## 16. React Router v6
 
 `npm install react-router-dom@6.4.1`
+
+```javascript
+import { Link, BrowserRouter, Routes, Route } from 'react-router-dom'
+
+;<BrowserRouter>
+  <header>
+    <Link to='/'>
+      <h1>Adopt Me!</h1>
+    </Link>
+  </header>
+  <Routes>
+    <Route path='/details/:id' element={<Details />} />
+    <Route path='/' element={<SearchParams />} />
+  </Routes>
+</BrowserRouter>
+```
+
+## 17. useParams
+
+useParams gets the id from the browser router
+
+```javascript
+import { useParams } from 'react-router-dom'
+
+const Details = () => {
+  const { id } = useParams()
+
+  return <h2>{id}</h2>
+}
+
+export default Details
+```
