@@ -158,25 +158,27 @@ React Hook **useEffect**, And effect is basically something that's going to happ
 An **Effect** runs, every single time, you re-render the application, so this is going to request the pets every single time i type, which is not what i want, i only want that on submit events.
 
 ```javascript
-  useEffect(() => {
-    requestPets();
-  });
+useEffect(() => {
+  requestPets()
+})
 ```
+
 #### So how do we do that?
+
 You can give it an array of dependencies. And here if i give it nothing, then it's only going to request once at the beginning and then it's never going to do it again, which is actually what i want. The only time after this that I want to call request pets is on submit, On the form submit, which so that puts the user in control of when this research is for things.
 
 ```javascript
-  useEffect(() => {
-    requestPets();
-  }, []);
+useEffect(() => {
+  requestPets()
+}, [])
 ```
 
 Every time that animal changes, I want you to rerun request pets. So now if i change animal, Now it's doing it every single time that i change this.
 
 ```javascript
-  useEffect(() => {
-    requestPets();
-  }, [animal]);
+useEffect(() => {
+  requestPets()
+}, [animal])
 ```
 
 ## 12. useBreedList Custom Hook
@@ -205,7 +207,7 @@ useEffect(() => {
       setBreedList(localCache[animal]);
       setStatus("loaded");
     }
-  
+
   }, [animal]);
 
   return [breedList, status]
@@ -221,3 +223,13 @@ to test.
 https://legacy.reactjs.org/docs/events.html#supported-events
 
 ## 14. Styling the Pet Component
+
+## 15. React Dev Tools
+
+**Props** are read only, they come in as properties, if i modify the props, it doesn't modify what the parent is passing in. State is mutable, usestate and hooks and things like that. 
+
+## Section 03: React Capabilities
+
+## 16. React Router v6
+
+`npm install react-router-dom@6.4.1`
