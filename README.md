@@ -310,3 +310,8 @@ const obj = {
 ```
 
 Now we're gonna have an obj which is gonna have the animal, the breed, and the location, which is gonna be the current state of the form.
+
+
+## 22. Class Components
+
+**State** is how you keep track of like internal state to a component. Basically, the same thing that you would use useState for.

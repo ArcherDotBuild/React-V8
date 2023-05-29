@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
+import Carousel from "./Carousel";
 import fetchPet from "./fetchPet";
 
 const Details = () => {
@@ -12,8 +13,8 @@ const Details = () => {
   // If you don't have that in your cache, run this (fetchPet )
   const results = useQuery(["details", id], fetchPet);
 
-  if(results.isError) {
-    return <h2>Oh no!</h2>
+  if (results.isError) {
+    return <h2>Oh no!</h2>;
   }
 
   // The first time this comes back, it's not going to have that cache
@@ -31,6 +32,7 @@ const Details = () => {
 
   return (
     <div className="details">
+      <Carousel images={pet.images} />
       <div>
         <h1>{pet.name}</h1>
         <h2>
