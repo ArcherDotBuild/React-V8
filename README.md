@@ -315,3 +315,7 @@ Now we're gonna have an obj which is gonna have the animal, the breed, and the l
 ## 22. Class Components
 
 **State** is how you keep track of like internal state to a component. Basically, the same thing that you would use useState for.
+
+## 23. Handling Events in Class Components
+
+Everything that comes out of the DOM is a **string** all the time.
