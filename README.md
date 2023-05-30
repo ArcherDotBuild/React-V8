@@ -321,4 +321,6 @@ Everything that comes out of the DOM is a **string** all the time.
 
 ## Section 04: Special Case React Tools
 
-## 16. Error Boundaries
+## 24. Error Boundaries
+
+## 25. Modals with Portals
