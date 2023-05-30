@@ -311,7 +311,6 @@ const obj = {
 
 Now we're gonna have an obj which is gonna have the animal, the breed, and the location, which is gonna be the current state of the form.
 
-
 ## 22. Class Components
 
 **State** is how you keep track of like internal state to a component. Basically, the same thing that you would use useState for.
@@ -319,3 +318,7 @@ Now we're gonna have an obj which is gonna have the animal, the breed, and the l
 ## 23. Handling Events in Class Components
 
 Everything that comes out of the DOM is a **string** all the time.
+
+## Section 04: Special Case React Tools
+
+## 16. Error Boundaries

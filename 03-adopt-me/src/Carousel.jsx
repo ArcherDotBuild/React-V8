@@ -16,11 +16,14 @@ class Carousel extends Component {
   handleIndexClick = (e) => {
     this.setState({
       // This is called a unary plus which takes a string and turns it into a number
-      active: +e.target.dataset.index
-    })
-  }
+      active: +e.target.dataset.index,
+    });
+  };
 
   render() {
+    // Use this to the ErrorBoundary
+    // throw new Error('lol error')
+
     const { active } = this.state;
     const { images } = this.props;
 
@@ -30,8 +33,8 @@ class Carousel extends Component {
         <div className="carousel-smaller">
           {images.map((photo, index) => (
             <img
-            onClick={this.handleIndexClick}
-            data-index={index}
+              onClick={this.handleIndexClick}
+              data-index={index}
               key={photo}
               src={photo}
               className={index == active ? "active" : ""}
