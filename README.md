@@ -326,3 +326,13 @@ Everything that comes out of the DOM is a **string** all the time.
 ## 25. Modals with Portals
 
 ## 26. Implementing Modals with Portals
+
+## 27. Context
+
+Context is going to be this app level, generalized state.
+
+You really wanna be judicious of where state goes. And one of the benefits of React is how explicit data flows in your app. If I have information that's in details I wanna be able to find where it came from, And kind of trace everything where that goes.
+
+As soon as you start introducing **context** into your app, you get this indirection. You have state that comes from somewhere that it's kind of hard to follow where it came from. So you're getting this general availability of it, which makes it easy to use. But what you're trading off on is that it becomes difficult to find where it came from, and how it was modified, and where the bugs are.
+
+
