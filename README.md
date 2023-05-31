@@ -335,4 +335,4 @@ You really wanna be judicious of where state goes. And one of the benefits of Re
 
 As soon as you start introducing **context** into your app, you get this indirection. You have state that comes from somewhere that it's kind of hard to follow where it came from. So you're getting this general availability of it, which makes it easy to use. But what you're trading off on is that it becomes difficult to find where it came from, and how it was modified, and where the bugs are.
 
-
+## 28. Context Q&A
