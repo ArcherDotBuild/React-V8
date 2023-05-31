@@ -324,3 +324,5 @@ Everything that comes out of the DOM is a **string** all the time.
 ## 24. Error Boundaries
 
 ## 25. Modals with Portals
+
+## 26. Implementing Modals with Portals
